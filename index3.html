@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link href="css/style-min.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="profit">
+  <div class="profit__bg_footer">
+    <img class="profit__bg profit__bg_clouds" src="./images/clouds_main.svg" alt="">
+    <img class="profit__bg profit__bg_forest" src="./images/forest.svg" alt="">
+  </div>
+</section>
+
+<!--
+<section class="profit">
+  <div class="profit__profits">
+    <img class="profit__bg" src="./images/empty-mountain.svg" alt="">
+    <div class="profit__items">
+      <div class="profit__item">
+        <div class="profit__name">
+          Profit и Revenue
+        </div>
+        <div class="profit__additional">
+          Совместными усилиями, мы приведем игру к успеху!
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_1">
+        <div class="profit__name">Эффективная закупка<br> трафика</div>
+        <div class="profit__additional">
+          Привлечение игроков посредством большого количества источников трафика, таких как: Google Ads,
+          Facebook
+          Ads, AppLovin, Unity Ads, ChartBoost, Apple Search Ads и многие другие ... У нас огромный отдел
+          PR и
+          Digital специалистов, которые привлекут потенциальную аудиторию.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_2">
+        <div class="profit__name">Индивидуальный подход и<br> финансовая помощь</div>
+        <div class="profit__additional">
+          У нас индивидуальный подход к каждому разработчику, оцениваем и даем решение исходя из четкого
+          анализа игры. При необходимости можем инвестировать в дальнейшую разработчику и улучшение вашей
+          игры.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_3">
+        <div class="profit__name">Оптимизация Монетизации</div class=profit__name">
+        <div class="profit__additional">
+          Повысим качество и уровень монетизации, чтобы игроки были довольны, а соотношение ROI было
+          высоким.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_4">
+        <div class="profit__name">LTV прогнозирование</div>
+        <div class="profit__additional">
+          Сделаем полный расчет жизненного цикла игрока, просчитаем ARPDAU (средняя выручка на ежедневно
+          активного пользователя). Создадим точный прогноз для дальнейшего маркетинга.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_5">
+        <div class="profit__name">Экспертиза от опытных Геймдизайнеров</div>
+        <div class="profit__additional">
+          Наш отдел геймдизайнеров проведет экспертизу мобильной игры, сделает анализ возможностей
+          монетизации, просчитают игровой баланс и будут поддерживать связь и мониторинг игры на
+          протяжении всей работы.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_6">
+        <div class="profit__name">Маркетинговая стратегия</div>
+        <div class="profit__additional">
+          Посредством нашего web - приложения (ASOMaker), соберем семантическое ядро под вашу игру,
+          просчитаем
+          ставки по ключам, создадим базу, по которой будем выводить вашу игру в топ 3 по ключевым
+          запросам.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_7">
+        <div class="profit__name">Full App Search Optimisation</div>
+        <div class="profit__additional">
+          Наши маркетологи проведут детальный анализ игры, ее жанра и контента. Создадут полную стратегию
+          продвижения, и на основе всех данных смогут дать четкий ответ о дальнейшей работе.
+        </div>
+      </div>
+      <div class="profit__item" id="profit__item_8">
+        <div class="profit__name">Полная аналитика приложения</div>
+        <div class="profit__additional">
+          Проанализируем вашу игру, оценим среду конкуренции жанра вашей игры. Сделаем оценку контента и
+          найдем слабые и сильные факторы. Проведем тестирование, на основе которого поможем вам исправить
+          баги.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="profit__info-wrapper">
+    <div class="profit__info" id="profit__text_0">
+      Совместными усилиями, мы приведем игру к успеху!
+      <div id="profit__text_line_0"></div>
+    </div>
+    <div class="profit__info" id="profit__text_1">
+      Привлечение игроков посредством большого количества источников трафика, таких как: Google Ads,
+      Facebook
+      Ads, AppLovin, Unity Ads, ChartBoost, Apple Search Ads и многие другие ... У нас огромный отдел
+      PR и
+      Digital специалистов, которые привлекут потенциальную аудиторию.
+      <div id="profit__text_line_1"></div>
+    </div>
+    <div class="profit__info" id="profit__text_2">
+      У нас индивидуальный подход к каждому разработчику, оцениваем и даем решение исходя из четкого
+      анализа игры. При необходимости можем инвестировать в дальнейшую разработчику и улучшение вашей
+      игры.
+      <div id="profit__text_line_2"></div>
+    </div>
+    <div class="profit__info" id="profit__text_3">
+      Повысим качество и уровень монетизации, чтобы игроки были довольны, а соотношение ROI было
+      высоким.
+      <div id="profit__text_line_3"></div>
+    </div>
+    <div class="profit__info" id="profit__text_4">
+      Сделаем полный расчет жизненного цикла игрока, просчитаем ARPDAU (средняя выручка на ежедневно
+      активного пользователя). Создадим точный прогноз для дальнейшего маркетинга.
+      <div id="profit__text_line_4"></div>
+    </div>
+    <div class="profit__info" id="profit__text_5">
+      Наш отдел геймдизайнеров проведет экспертизу мобильной игры, сделает анализ возможностей
+      монетизации, просчитают игровой баланс и будут поддерживать связь и мониторинг игры на
+      протяжении всей работы.
+      <div id="profit__text_line_5"></div>
+    </div>
+    <div class="profit__info" id="profit__text_6">
+      Наши маркетологи проведут детальный анализ игры, ее жанра и контента. Создадут полную стратегию
+      продвижения, и на основе всех данных смогут дать четкий ответ о дальнейшей работе.
+      <div id="profit__text_line_6"></div>
+    </div>
+    <div class="profit__info" id="profit__text_7">
+      Посредством нашего web - приложения (ASOMaker), соберем семантическое ядро под вашу игру,
+      просчитаем
+      ставки по ключам, создадим базу, по которой будем выводить вашу игру в топ 3 по ключевым
+      запросам.
+      <div id="profit__text_line_7"></div>
+    </div>
+    <div class="profit__info" id="profit__text_8">
+      Проанализируем вашу игру, оценим среду конкуренции жанра вашей игры. Сделаем оценку контента и
+      найдем слабые и сильные факторы. Проведем тестирование, на основе которого поможем вам исправить
+      баги.
+      <div id="profit__text_line_8">
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+</body>
+</html>

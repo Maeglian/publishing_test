@@ -1,0 +1,295 @@
+.profit {
+  background-color: #eeeef1;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+    height: 647px;
+  }
+
+  &__bg_footer {
+    position: relative;
+    background: #EEEEF1;
+  }
+
+  &__bg_clouds {
+    position: absolute;
+    top: 120px;
+  }
+
+  &__bg_forest {
+    position: absolute;
+    top: 10px;
+  }
+
+  &__profits {
+    position: absolute;
+    right: 20px;
+    width: 818px;
+
+    @media (max-width: 1200px) {
+      right: -160px;
+    }
+
+    @media (max-width: 460px) {
+      right: -260px;
+    }
+
+
+
+    //background-image: url(./../../images/empty-mountain.svg);
+
+  }
+
+  &__additional {
+    display: none;
+    background: #462B6E;
+  }
+
+  &__info {
+
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    clip-path: polygon(70px 626px,141px 634px,199px 639px,284px 640px,396px 642px,532px 643px,709px 641px,814px 639px,784px 565px,756px 494px,716px 458px,667px 413px,626px 356px,574px 284px,530px 194px,484px 127px,459px 96px,384px 5px,363px 35px,318px 96px,280px 154px,251px 278px,219px 328px,205px 357px,169px 429px,126px 474px,98px 509px,46px 569px,5px 617px);
+    //clip-path: polygon(105px 630px,182px 637px,256px 641px,371px 642px,658px 642px,804px 640px,813px 636px,757px 495px,665px 411px,639px 373px,573px 280px,533px 198px,483px 124px,459px 94px,384px 5px,318px 97px,279px 157px,251px 280px,219px 330px,170px 427px,124px 477px,56px 557px,5px 617px);
+
+    //clip-path: polygon(76px 531px,111px 487px,167px 430px,218px 329px,249px 281px,277px 156px,384px 3px,479px 118PX,531px 195px,572px 280px,664px 409px,757px 496px,816px 640px,729px 639px,473px 645px,238px 640px,119px 634px,2px 617px,32px 583px);
+  }
+
+  &__items_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 170px;
+    padding-right: 30px;
+    background-color: #dedbe4;
+    //clip-path: polygon(328px 160px,382px 139px,438px 170px,485px 129px,472px 110px,446px 79px,383px 4px,361px 37px,319px 92px,297px 128px);
+    clip-path: polygon(380px -11px,535px 90px,448px 166px,386px 137px,323px 169px,285px 122px);
+    //clip-path: polygon(332px 158px,382px 130px,445px 161px,484px 128px,474px 114px,453px 90px,384px 4px,319px 94px,297px 131px);
+    border-bottom: 1px solid #000;
+
+    .profit__item {
+      padding-top: 40px;
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  &__items_bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -50px;
+
+    .profit__item:last-child {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__pointer {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    opacity: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #ff5252;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #462B6E;
+
+    @media (max-width: 460px) {
+      font-size: 14px;
+    }
+
+    &:first-child {
+      padding-top: 60px;
+    }
+
+    &:hover {
+      background-color: white;
+      cursor: pointer;
+
+      @media (min-width: 991px) {
+        .profit__pointer {
+          opacity: 1;
+        }
+      }
+
+      .profit__name:before {
+         background-color: #ff5252;
+      }
+
+      .profit__name:after {
+        left: 10px;
+        border-color: #fff;
+        transform: translateY(-50%) rotate(-135deg) ;
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+  }
+
+  &__name:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ff5252;
+      border-radius: 100%;
+      transform: translateY(-50%);
+  }
+
+  &__name:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #ff5252;
+    border-top: 1px solid #ff5252;
+    transform: rotate(45deg) translateY(-50%);
+  }
+
+  &__info-wrapper {
+    position: absolute;
+    top: 100px;
+    right: 860px;
+    display: none;
+    max-width: 450px;
+    padding-bottom: 100px;
+    color: #eeeef1;
+    font-family: "muller_regularregular";
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 6px;
+    z-index: 2;
+
+    @media (max-width: 1200px) {
+      right: 700px;
+    }
+
+    @media (max-width: 990px) {
+      top: initial;
+      right: initial;
+      left: 50%;
+      padding-bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 460px) {
+      width: 100%;
+    }
+
+    &_visible {
+      display: block;
+    }
+  }
+
+  &__info-wrapper:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    bottom: 0;
+    width: 2px;
+    height: 100px;
+    background-color: #ff5252;
+
+    @media (max-width: 990px) {
+      display: none;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: none;
+    padding: 25px 25px 50px 25px;
+    background: #ff5252;
+    border-radius: 6px;
+
+    &_visible {
+      display: block;
+    }
+  }
+
+  &__info_visible:before {
+    @media (max-width: 990px) {
+      content: "";
+      position: absolute;
+      left: calc(50% - 5px);
+      bottom: -5px;
+      width: 10px;
+      height: 10px;
+      background-color: #ff5252;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__info[data-idx="0"]:before, .profit__info[data-idx="1"]:before  {
+    @media (max-width: 990px) {
+      top: -5px;
+      bottom: initial;
+    }
+  }
+
+  &__lineSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    //z-index: 1;
+    //display: none;
+    width: 100%;
+    height: 100%;
+    stroke: #ff5252;
+
+    &_visible {
+      display: block;
+    }
+  }
+
+  &__line {
+    stroke-width: 2;
+  }
+
+  &__connector {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 1px);
+    width: 100px;
+    height: 2px;
+    background-color: #ff5252;
+    transform-origin: 0 100%;
+
+    @media (max-width: 990px) {
+      display: none;
+    }
+  }
+}
