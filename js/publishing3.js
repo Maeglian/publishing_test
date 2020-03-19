@@ -1,7 +1,7 @@
 const mobileWidth = 990;
-let windowWidth;
+let windowWidth, lineCoords;
 const line = document.querySelector(".profit__connector");
-const lineWidth = parseInt(getComputedStyle(line).height);
+const lineWidth = parseInt(getComputedStyle(line).width);
 const wrapper = document.querySelector(".profit__info-wrapper");
 const infoBlocks = [...document.querySelectorAll(".profit__info")];
 const points = [...document.querySelectorAll(".profit__pointer")];
@@ -12,10 +12,10 @@ const profitItemsCoords = [];
 
 const getNeededCoords = () => {
   windowWidth = document.documentElement.clientWidth;
-  profitItemsCoords.length = 0;
-  pointsCoords.length = 0;
 
   if (windowWidth > mobileWidth) {
+    lineCoords = line.getBoundingClientRect();
+
     points.forEach((point => {
       const pointCoords = point.getBoundingClientRect();
       pointsCoords.push({top: pointCoords.top, left: pointCoords.left, bottom: pointCoords.bottom, right: pointCoords.right});
@@ -31,7 +31,6 @@ const getNeededCoords = () => {
 getNeededCoords();
 
 const drawLine = (i) => {
-  const lineCoords = line.getBoundingClientRect();
   const a = pointsCoords[i].bottom - pointerWidth / 2 - lineCoords.top - lineWidth / 2;
   const b = pointsCoords[i].left + pointerWidth / 2 - lineCoords.left + lineWidth / 2;
   const width = Math.sqrt(a * a + b * b);

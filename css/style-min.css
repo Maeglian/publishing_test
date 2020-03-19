@@ -330,19 +330,6 @@ img {
   }
 }
 
-.profit__lineSvg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  stroke: #ff5252;
-}
-
-.profit__lineSvg_visible {
-  display: block;
-}
-
 .profit__line {
   stroke-width: 2;
 }
