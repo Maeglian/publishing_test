@@ -1,56 +1,56 @@
-const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const less = require("gulp-less");
-const terser = require('gulp-terser');
-const imagemin = require("gulp-imagemin");
-const pngquant = require('imagemin-pngquant');
-const autoprefixer = require("gulp-autoprefixer");
-const sourcemaps = require("gulp-sourcemaps");
-const concat = require('gulp-concat-css');
-const csso = require("gulp-csso");
-const rename = require("gulp-rename");
-const server = require('browser-sync').create();
+const gulp = require('gulp')
+const plumber = require('gulp-plumber')
+const less = require('gulp-less')
+const terser = require('gulp-terser')
+const imagemin = require('gulp-imagemin')
+const pngquant = require('imagemin-pngquant')
+const autoprefixer = require('gulp-autoprefixer')
+const sourcemaps = require('gulp-sourcemaps')
+const concat = require('gulp-concat-css')
+const csso = require('gulp-csso')
+const rename = require('gulp-rename')
+const server = require('browser-sync').create()
 
-gulp.task("css", function() {
-  return gulp.src("less/**/*.less")
+gulp.task('css', function () {
+  return gulp.src('less/**/*.less')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest('css'))
     .pipe(autoprefixer({
-        overrideBrowserslist: ['last 2 versions'],
-        cascade: false
+      overrideBrowserslist: ['last 2 versions'],
+      cascade: false
     }))
     .pipe(csso())
-    .pipe(concat("style.css"))
+    .pipe(concat('style.css'))
     .pipe(rename({
-        suffix: "-min",
-        extname: ".css"
+      suffix: '-min',
+      extname: '.css'
     }))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./css"))
-    .pipe(server.stream());
-});
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./css'))
+    .pipe(server.stream())
+})
 
-gulp.task("js", function () {
-  return gulp.src("js/**/*.js")
+gulp.task('js', function () {
+  return gulp.src('js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(rename({
-      suffix: "-min",
-      extname: ".js"
+      suffix: '-min',
+      extname: '.js'
     }))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./js"))
-});
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./js'))
+})
 
-gulp.task('serve', function() {
-    server.init({
-        server: {
-            baseDir: "./",
-            }
-        });
+gulp.task('serve', function () {
+  server.init({
+    server: {
+      baseDir: './',
+    }
+  })
 
-  gulp.watch("less/**/*.less", gulp.series("css"));
-	gulp.watch("**/*.html").on("change", server.reload);
-});
+  gulp.watch('less/**/*.less', gulp.series('css'))
+  gulp.watch('**/*.html').on('change', server.reload)
+})

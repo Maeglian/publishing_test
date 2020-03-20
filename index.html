@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test</title>
   <link href="css/style-min.css" rel="stylesheet">
-  <script src="js/publishing-min.js" defer ></script>
+  <script src="js/publishing.js" defer></script>
 </head>
 <body>
 <section class="profit">
   <div class="profit__wrapper">
     <div class="profit__profits">
-      <img class="profit__bg" src="./images/empty-mountain.svg" alt="">
+      <div class="profit__bg">
+        <img src="./images/mountainpeople.svg" alt="">
+        <img class="profit__mountain-top" src="./images/top-line.png" alt="">
+      </div>
       <div class="profit__items">
         <div class="profit__items_top">
           <div class="profit__item" data-idx="0">
@@ -164,7 +167,16 @@
       </div>
       <div class="profit__connector">
       </div>
+    </div>
   </div>
+  <div class="profit__bg-bottom">
+    <picture>
+      <source srcset="./images/forestclouds460.png" media="(max-width: 460px)">
+      <source srcset="./images/forestclouds768.png" media="(max-width: 768px)">
+      <source srcset="./images/forestclouds1200.png" media="(max-width: 1200px)">
+      <source srcset="./images/forestclouds1900.png" media="(max-width: 1900px)">
+      <img src="./images/forestclouds.png" alt="">
+    </picture>
   </div>
 </section>
 
