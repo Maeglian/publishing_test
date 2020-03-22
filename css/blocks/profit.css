@@ -236,7 +236,7 @@
 @media (max-width: 990px) {
   .profit__info-wrapper {
     right: 400px;
-    max-width: 400px;
+    width: 400px;
   }
 }
 @media (max-width: 768px) {

@@ -1,9 +1,10 @@
+import 'element-closest-polyfill';
+
 let windowWidth, wrapperTopCoords, profitsBlockCoords, openedInfoBlock = null;
 const mobileWidth = 768;
 const infoBlocksDesiredOffset = 20;
 const cloudsMovingDistance = -70;
 const line = document.querySelector('.profit__connector');
-console.log(getComputedStyle(line));
 const lineWidth = parseInt(getComputedStyle(line).height);
 const wrapper = document.querySelector('.profit__wrapper');
 const infoBlocksWrapper = document.querySelector('.profit__info-wrapper');
@@ -66,7 +67,7 @@ const setInfoBlocksBehaviour = () => {
     } else {
       profitItems.forEach((item => {
         const itemCoords = item.getBoundingClientRect();
-        profitItemsCoords.push(itemCoords.y - wrapperTopCoords);
+        profitItemsCoords.push(itemCoords.top - wrapperTopCoords);
       }));
     }
   };
@@ -172,7 +173,6 @@ const animateClouds = () => {
   const animateCloudsOnScroll = () => {
     clouds.forEach((cloud, i) => {
       if (cloudsCoords[i].top <= halfWindowHeight) {
-        console.log("eee");
         cloud.style["-moz-transform"] = `translateX(${cloudsMovingDistance}px)`;
         cloud.style["-o-transform"] = `translateX(${cloudsMovingDistance}px)`;
         cloud.style["-ms-transform"] = `translateX(${cloudsMovingDistance}px)`;

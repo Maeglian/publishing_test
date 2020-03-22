@@ -10,6 +10,8 @@ const sourcemaps = require('gulp-sourcemaps')
 const concat = require('gulp-concat-css')
 const csso = require('gulp-csso')
 const rename = require('gulp-rename')
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
 const server = require('browser-sync').create()
 
 gulp.task('css', function () {
@@ -36,8 +38,31 @@ gulp.task('css', function () {
 gulp.task('js', function () {
   return gulp.src('js/**/*.js')
     .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env']
+    .pipe(webpackStream({
+      output: {
+        filename: 'main.js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              "presets": [
+                ["@babel/preset-env", {
+                  "targets": {
+                    "browsers": ["ie >= 11"]
+                  },
+                  "corejs": 3,
+                  "debug": true,
+                  "useBuiltIns": "usage"
+                }],
+              ]
+            }
+          }
+        ]
+      }
     }))
     .pipe(terser())
     .pipe(rename({
@@ -56,5 +81,6 @@ gulp.task('serve', function () {
   })
 
   gulp.watch('less/**/*.less', gulp.series('css'))
+  // gulp.watch('js/**/*.js', gulp.series('js'))
   gulp.watch('**/*.html').on('change', server.reload)
 })
