@@ -2,12 +2,56 @@
 /* Текст */
 /* Брейкпоинты */
 .profit {
+  padding-top: 50px;
   background: #eeeef1;
   overflow: hidden;
 }
 .profit__wrapper {
   position: relative;
-  height: 679px;
+  height: 809px;
+}
+.profit__cloud {
+  position: absolute;
+}
+.profit__cloud_3 {
+  top: 300px;
+  right: -150px;
+  transition: transform 1s ease-in;
+}
+.profit__cloud_2 {
+  top: 430px;
+  left: 0;
+  transition: transform 1.5s ease-in;
+}
+@media (max-width: 990px) {
+  .profit__cloud_2 {
+    left: -100px;
+  }
+}
+@media (max-width: 768px) {
+  .profit__cloud_2 {
+    display: none;
+  }
+}
+.profit__cloud_1 {
+  top: 535px;
+  left: 265px;
+  transition: transform 1s ease-in;
+}
+@media (max-width: 1200px) {
+  .profit__cloud_1 {
+    left: 100px;
+  }
+}
+@media (max-width: 990px) {
+  .profit__cloud_1 {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .profit__cloud_1 {
+    display: none;
+  }
 }
 .profit__mountain-top {
   position: absolute;
@@ -47,6 +91,7 @@
 }
 .profit__profits {
   position: absolute;
+  top: 130px;
   right: -160px;
   width: 818px;
 }
@@ -65,7 +110,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
   text-align: center;
   clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px);
 }
@@ -95,6 +139,7 @@
 }
 .profit__items_bottom .profit__item:last-child {
   padding-bottom: 150px;
+  border-bottom: none;
 }
 .profit__pointer {
   position: absolute;
@@ -114,6 +159,7 @@
   align-items: center;
   margin-left: -30px;
   padding: 10px 0;
+  background-color: #EEEEF1;
   border-bottom: 1px solid #462B6E;
 }
 @media (max-width: 460px) {

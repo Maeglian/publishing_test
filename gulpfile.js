@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const babel = require("gulp-babel");
 const plumber = require('gulp-plumber')
 const less = require('gulp-less')
 const terser = require('gulp-terser')
@@ -35,6 +36,9 @@ gulp.task('css', function () {
 gulp.task('js', function () {
   return gulp.src('js/**/*.js')
     .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(terser())
     .pipe(rename({
       suffix: '-min',
