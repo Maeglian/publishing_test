@@ -14,9 +14,15 @@
   position: absolute;
 }
 .profit__cloud_3 {
-  top: 300px;
+  top: 50px;
   right: -150px;
   transition: transform 1s ease-in;
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__cloud_3 {
+    top: 300px;
+  }
 }
 .profit__cloud_2 {
   top: 430px;
@@ -63,8 +69,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-top: -205px;
+  margin-top: -170px;
   clip-path: polygon(0 0, 50% 0, 65% 20%, 75% 25%, 80% 20%, 100% 5%, 100% 100%, 0 100%, 0 0);
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__bg-bottom {
+    margin-top: -205px;
+  }
 }
 @media (max-width: 1200px) {
   .profit__bg-bottom {
@@ -105,37 +117,111 @@
   background: #462B6E;
 }
 .profit__items {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   position: absolute;
   top: 0;
-  width: 100%;
+  left: 50%;
+  width: auto;
   text-align: center;
-  clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px);
+  transform: translateX(-50%);
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__items {
+    left: 0;
+    display: flex;
+    width: 100%;
+    transform: none;
+    clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px);
+  }
 }
 .profit__items_top {
-  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  height: 210px;
-  padding-right: 30px;
-  clip-path: polygon(320px 195px, 381px 181px, 440px 205px, 484px 166px, 469px 147px, 426px 93px, 383px 43px, 360px 76px, 328px 119px, 297px 163px);
-  background: #EEEEF1;
-  border-bottom: 1px solid #000;
+  transform: translateX(-80%);
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__items_top {
+    position: relative;
+    top: initial;
+    left: initial;
+    height: 209px;
+    padding-right: 30px;
+    background: #EEEEF1;
+    border-bottom: 1px solid #000;
+    transform: none;
+    clip-path: polygon(320px 195px, 381px 181px, 440px 205px, 484px 166px, 469px 147px, 426px 93px, 383px 43px, 360px 76px, 328px 119px, 297px 163px);
+    z-index: 1;
+  }
+  .profit__items_top:hover {
+    background-color: white;
+  }
 }
 .profit__items_top .profit__item {
   margin-top: 30px;
   border-bottom: none;
 }
-.profit__items_top:hover {
-  background-color: white;
-}
 .profit__items_bottom {
   flex-grow: 1;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: -50px;
+  margin-top: 160px;
+}
+.profit__items_bottom .profit__item {
+  position: relative;
+}
+.profit__items_bottom .profit__item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  background-color: #462B6E;
+}
+.profit__items_bottom .profit__item[data-idx="1"]:after {
+  left: 50px;
+  right: 35px;
+}
+.profit__items_bottom .profit__item[data-idx="2"]:after {
+  left: 40px;
+  right: 10px;
+}
+.profit__items_bottom .profit__item[data-idx="3"]:after {
+  left: 20px;
+  right: -10px;
+}
+.profit__items_bottom .profit__item[data-idx="4"]:after {
+  left: -5px;
+  right: -40px;
+}
+.profit__items_bottom .profit__item[data-idx="5"]:after {
+  left: -25px;
+  right: -65px;
+}
+.profit__items_bottom .profit__item[data-idx="6"]:after {
+  left: -40px;
+  right: -90px;
+}
+.profit__items_bottom .profit__item[data-idx="7"]:after {
+  left: -70px;
+  right: -110px;
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__items_bottom {
+    margin-top: -50px;
+  }
+  .profit__items_bottom .profit__item:after {
+    display: none;
+  }
 }
 .profit__items_bottom .profit__item:last-child {
   padding-bottom: 150px;
@@ -153,14 +239,21 @@
   transform: translateY(-50%);
 }
 .profit__item {
-  flex-grow: 1;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   margin-left: -30px;
   padding: 10px 0;
-  background-color: #EEEEF1;
-  border-bottom: 1px solid #462B6E;
+}
+@supports (clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px))
+      or (-webkit-clip-path: polygon(83px 663px, 165px 670px, 215px 674px, 438px 678px, 643px 677px, 813px 674px, 755px 531px, 663px 446px, 604px 361px, 571px 317px, 529px 231px, 481px 160px, 428px 96px, 384px 42px, 325px 122px, 280px 190px, 252px 314px, 219px 364px, 209px 386px, 169px 464px, 110px 528px, 51px 598px, 7px 651px)) {
+  .profit__item {
+    background-color: #EEEEF1;
+    border-bottom: 1px solid #462B6E;
+  }
+  .profit__item:hover {
+    background-color: #ffffff;
+  }
 }
 @media (max-width: 460px) {
   .profit__item {
@@ -171,7 +264,6 @@
   padding-top: 60px;
 }
 .profit__item:hover {
-  background-color: white;
   cursor: pointer;
 }
 @media (min-width: 769px) {
